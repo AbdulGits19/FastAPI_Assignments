@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from uuid import uuid4
-from models import Doctor, Patient 
+from Task1.models import Doctor, Patient 
 from database import doctors, patients 
 
 app = FastAPI() #
