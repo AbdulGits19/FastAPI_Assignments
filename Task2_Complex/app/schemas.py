@@ -24,16 +24,20 @@ class DoctorResponse(DoctorBase):
     class Config:
         from_attributes = True # This allows Pydantic to read SQLAlchemy models
 
-# Patient Schemas 
+# --- PATIENT SCHEMAS ---
 
+# 1. The Base (Common fields)
 class PatientBase(BaseModel):
     name: str
-    phone: str
     age: int = Field(gt=0, description='Age must be > 0')
+    gender: str
+    phone: str
 
+# 2. Used for creating a patient (Incoming)
 class PatientCreate(PatientBase):
-    pass
+    pass 
 
+# 3. Used for the API response (Outgoing)
 class PatientResponse(PatientBase):
     id: int
 

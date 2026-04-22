@@ -12,11 +12,11 @@ class Doctor(Base):
 
 class Patient(Base):
     __tablename__ = "patients"
-
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
-    phone = Column(String, unique=True)
     age = Column(Integer)
+    gender = Column(String)
+    phone = Column(String)
 
 class Appointment(Base):
     __tablename__ = "appointments"
