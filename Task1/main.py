@@ -1,9 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from uuid import uuid4
-from Task1.models import Doctor, Patient 
-from database import doctors, patients 
+from models import Doctor, Patient 
+from database import doctors, patients
 
-app = FastAPI() #
+app = FastAPI() 
 
 @app.get('/')
 def home():

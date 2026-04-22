@@ -1,0 +1,14 @@
+# Database
+healthcare.db
+
+# Environments
+.env
+
+# Postman (both hidden and visible folders)
+.postman/
+postman/
+
+# Python clutter
+__pycache__/
+*.pyc
+.pytest_cache/
